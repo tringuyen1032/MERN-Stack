@@ -59,11 +59,13 @@ const login = async (req, res) => {
             .status(400)
             .json({ success: false, message: 'Username or password incorrect' })
       }
-      const accessToken = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET)
-      
-      res.json({ 
-         success: true, 
-         message: `Welcome`, 
+      const accessToken = jwt.sign(
+         { userId: user._id },
+         process.env.ACCESS_TOKEN_SECRET)
+
+      res.json({
+         success: true,
+         message: `Welcome`,
          accessToken
       })
    } catch (error) {

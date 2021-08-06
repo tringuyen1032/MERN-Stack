@@ -2,8 +2,8 @@ POST http://localhost:5000/api/auth/register
 Content-Type:  application/json
 
 {
-   "username" : "admin1",
-   "password" : "admin1"
+   "username" : "admin",
+   "password" : "admin"
 }
 
 ################################
@@ -15,3 +15,39 @@ Content-Type: application/json
    "username" : "admin",
    "password" : "admin"
 }
+
+################################
+
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBjZjE5NDk5OTQ1YzE0MThlNTM1YzkiLCJpYXQiOjE2MjgyMzgyODB9.3TebuVVS25-emm7x4aRHSK1jO4tOB7PFdDAQC9gvyoQ
+
+{
+   "title" : "abcccc",
+   "description":"abcccc",
+   "url":"google.com",
+   "status":"LEARNING"
+}
+
+################################
+
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBjZjE5NDk5OTQ1YzE0MThlNTM1YzkiLCJpYXQiOjE2MjgyMzgyODB9.3TebuVVS25-emm7x4aRHSK1jO4tOB7PFdDAQC9gvyoQ
+
+################################
+
+PUT http://localhost:5000/api/post/610cff748a19cd5658e78acc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBjZjE5NDk5OTQ1YzE0MThlNTM1YzkiLCJpYXQiOjE2MjgyMzgyODB9.3TebuVVS25-emm7x4aRHSK1jO4tOB7PFdDAQC9gvyoQ
+
+{
+   "title" : "Youtube",
+   "description":"learn youtube",
+   "url":"ytb.com",
+   "status":""
+}
+
+################################
+
+DELETE http://localhost:5000/api/post/610cff748a19cd5658e78acc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBjZjE5NDk5OTQ1YzE0MThlNTM1YzkiLCJpYXQiOjE2MjgyMzgyODB9.3TebuVVS25-emm7x4aRHSK1jO4tOB7PFdDAQC9gvyoQ
